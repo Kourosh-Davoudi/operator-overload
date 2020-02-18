@@ -9,7 +9,7 @@ Learning outcomes highlights:
 **Problem:** Implement the following operators for <code>str class</code>. Note that <code>str</code> class (solution to Lab 6) has been written for you and you need only focus on adding the following operator functions.   
 - = (assignment operator): performs the assignment. Example of usage  <code>s1 = s2; // s1 and s2 are str </code>
 - \+ (concatenation operator): returns the concatenation of two operators.  Example of usage  <code>s1 + s2; </code>
- - Hint: the operator should create a string which has enouth space to hold the concatination 
+  - Hint: the operator should create a string which has enouth space to hold the concatination 
 - << and >> (insertion and extraction operators): do the input and output. Example of usage  <code>cout << s1; 
 
 # str.h
