@@ -1,15 +1,15 @@
 ## Operator Overloading for str class
 
 Learning outcomes highlights: 
-- Opverloading operator for a class with resource (str)
+- Opverloading operator for a *class with resource* (<cosde>str</code>)
   - = (assignment)
-  - + (concatination)
+  - \+ (concatination)
   - &gt;&gt; and '<<' overload
 
 **Problem:** Implement the following operators for <code>str class</code>. Note that str class (solution to Lab 6) has been written for you and you need only focus on adding the following operator functions.   
-- = (assignment operator): performs the assignment. Example of usage  s1 = s2; // s1 and s2 are str 
-- \+ (concatenation operator): returns the concatenation of two operators.  Example of usage  s1 + s2; 
-- << and >> (insertion and extraction operators): do the input and output. Example of usage  cout << s1; or cin >> s2 
+- = (assignment operator): performs the assignment. Example of usage  <code>s1 = s2; // s1 and s2 are str </code>
+- \+ (concatenation operator): returns the concatenation of two operators.  Example of usage  <code>s1 + s2; </code>
+- << and >> (insertion and extraction operators): do the input and output. Example of usage  <code>cout << s1; or cin >> s2 </code>
 
 # str.h
 ```C++
