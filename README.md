@@ -2,9 +2,9 @@
 
 Learning outcomes highlights: 
 - Opverloading operator for a class with resource (str)
-  - '=' (assignment)
-  - '+' (concatination)
-  - '&gt;&gt'; and '<<' overload
+  - = (assignment)
+  - + (concatination)
+  - &gt;&gt; and '<<' overload
 
 **Problem:** Implement the following operators for str class. Note that str class (solution to Lab 6) has been written for you and you need only focus on adding the following operator functions.   
 - = (assignment operator): performs the assignment. Example of usage  s1 = s2; // s1 and s2 are str 
