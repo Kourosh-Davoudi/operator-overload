@@ -1,4 +1,4 @@
-## Operator Overloading for str class
+## Operator Overloading for <code>str</code> class
 
 Learning outcomes highlights: 
 - Opverloading operator for a *class with resource* (<code>str</code>)
