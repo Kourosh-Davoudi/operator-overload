@@ -2,89 +2,105 @@
 
 Learning outcomes highlights: 
 - Opverloading operator for a class with resource (str)
+  - = (assignment)
   - overload (concatination)
-  - [] overload (indexig)
   - &gt;&gt; and << overload
 
-**Problem:** Write a program to get two file names as command-line arguments. The input file has one string in each line (without space). The program writes the input file strings in the output file in a reverse order. The program can be used as follows: 
+**Problem:** Impliment the following operators 
+Implement the following operators for str class:
+- = (assignment operator): performs the assignment. Example of usage  s1 = s2; // s1 and s2 are str 
+- + (concatenation operator): returns the concatenation of two operators.  Example of usage  s1 + s2; 
+- << and >> (insertion and extraction operators): do the input and output. Example of usage  cout << s1; or cin >> s2 
 
-./rev_file infile.txt outfile.txt (create outfile.txt)
-
-The starter code is written for you. You just need to insert your code as instructed.
-
+# str.cpp
 
 ```C++
-#include <iostream>
-#include <fstream>
+#include "str.h"
 #include <cstring>
 
-using namespace std;
-
-void freadnames(ifstream &, char * []);
-void fwritenames_reverse(ofstream &,char * []);
-void freenames(char * []);
-
-
-int main(int argc, char *argv[])
+str::str() 
 {
-	char *list[100];
-    
-    if(argc != 3){
-    	cerr << "Number of argument is not correct!" << endl;
-    	return 1;
-    }
-
-	ifstream fin(argv[1]);
-	if(fin.fail()){
-		cerr << "Cannot open the input file!" << endl;
-		return 1;
-	}
-
-	ofstream fout(argv[2]);
-	if(fin.fail()){
-		cerr << "Cannot open the output file!" << endl;
-		return 1;
-	}
-
-	freadnames(fin,list);
-	fwritenames_reverse(fout,list);
-	freenames(list);
-	
-	fin.close();
-	fout.close();
-	
-	return 0; 
+  _buf = nullptr;
+  _n = 0;
 }
 
-void freadnames(ifstream &f,char *list [])
+str::str(char ch)
 {
-	char x[200];
-
-	int i = 0;
-
-	// write a while loop to read one string form the input file and put it in x till the end file
-		// inside the loop allocate the dynamic array for list[i]
-		// copy string stored in x to list[i] array using strcpy
-		// increment i 
-
-	list[i] = nullptr;  // IMPORTANT: we put the null to the last pointer in list to mark the last element in list
+   _n = 1;
+  _buf = new char[_n];
+  _buf[0] = ch;
 }
-void fwritenames_reverse(ofstream &f,char *list [])
-{
-	int i;
-	for(i = 0; list[i] != nullptr ; ++i)
-		;
 
-	for(int j = i-1; j >= 0 ; --j)
-	{
-		// your code is here
-	}
-}
-void freenames(char *list [])
+str::str(const char* c_str)
 {
-	for (int i = 0; list[i] != nullptr; ++i)
-	{
-		delete [] list[i];;
-	}
+  _n = strlen(c_str);
+  _buf = new char[_n];
+  for (int i = 0; i < _n; ++i) 
+    _buf[i] = c_str[i];
+}
+str::str(const str &s)
+{
+  _n = s._n;
+  _buf = new char[_n];
+  for (int i = 0; i < _n; ++i) 
+    _buf[i] = s._buf[i];
+}
+
+str::~str()
+{
+  if (_buf) 
+    delete [] _buf;
+  _n = 0;
+  _buf = nullptr;
+}
+
+void str::print()
+{
+  for (int i = 0; i < _n; ++i) 
+    cout << _buf[i];
+  cout << endl;
+}
+
+void str::clear()
+{
+  if (_buf) 
+    delete [] _buf;
+
+  _buf = nullptr;
+  _n = 0;
+}
+
+void str::append(const str & s)
+{
+  char *p = new char[_n + s._n];
+
+  int i;
+  
+  for (i = 0; i < _n; ++i) 
+    p[i] = _buf[i];
+  
+  for (int j = 0; j < s._n; ++i,++j) 
+    p[i] = s._buf[j];
+
+  if (_buf) 
+    delete [] _buf;
+
+  _buf = p;  
+  _n = _n + s._n;
+}
+
+void swap(str& x, str& y)
+{
+  char *tmp;
+  int ntmp;
+  
+  tmp = x._buf;
+  x._buf = y._buf;
+  y._buf = tmp;
+
+  ntmp = x._n;
+  x._n = y._n;
+  y._n = ntmp;
+  
 }
 ```
