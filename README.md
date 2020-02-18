@@ -10,8 +10,8 @@ Learning outcomes highlights:
 - = (assignment operator): performs the assignment. An example of usage is  <code>s1 = s2; // s1 and s2 are str </code>
 - \+ (concatenation operator): returns the concatenation of two operators.  An example of usage is <code>s1 + s2; </code>
   - Hint: the operator should create a string which has enouth space to hold the concatination of two straing (it does not change any of its operands) 
--  &lt;&lt; and &gt;&gt; (insertion and extraction operators): do the input and output. An example of usage is  <code>cout << s1;
-Write a main to test the operator that you have overloaded.
+-  &lt;&lt; and &gt;&gt; (insertion and extraction operators): do the input and output. An example of usage is  <code>cout &lt;&lt; s1;</code>
+Write a main.cpp to test the operator that you have overloaded.
 
 ### str.h
 ```C++
