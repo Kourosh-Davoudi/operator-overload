@@ -3,12 +3,12 @@
 Learning outcomes highlights: 
 - Opverloading operator for a class with resource (str)
   - '=' (assignment)
-  - '+' overload (concatination)
+  - '+' (concatination)
   - '&gt;&gt'; and '<<' overload
 
 **Problem:** Implement the following operators for str class. Note that str class (solution to Lab 6) has been written for you and you need only focus on adding the following operator functions.   
 - = (assignment operator): performs the assignment. Example of usage  s1 = s2; // s1 and s2 are str 
-- + (concatenation operator): returns the concatenation of two operators.  Example of usage  s1 + s2; 
+- \+ (concatenation operator): returns the concatenation of two operators.  Example of usage  s1 + s2; 
 - << and >> (insertion and extraction operators): do the input and output. Example of usage  cout << s1; or cin >> s2 
 
 # str.h
