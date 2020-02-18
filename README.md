@@ -11,7 +11,8 @@ Learning outcomes highlights:
 - \+ (concatenation operator): returns the concatenation of two operators.  An example of usage is <code>s1 + s2; </code>
   - Hint: the operator should create a string which has enouth space to hold the concatination of two straing (it does not change any of its operands) 
 -  &lt;&lt; and &gt;&gt; (insertion and extraction operators): do the input and output. An example of usage is  <code>cout << s1;
-  
+Write a main to test the operator that you have overloaded.
+
 ### str.h
 ```C++
 // str.h
