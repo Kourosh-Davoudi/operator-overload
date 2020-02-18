@@ -4,14 +4,15 @@ Learning outcomes highlights:
 - Opverloading operator for a *class with resource* (<code>str</code>)
   - = (assignment)
   - \+ (concatination)
-  - &gt;&gt; and '<<' overload
+  - &gt;&gt; and &lt;&lt; (input/output)
 
 **Problem:** Implement the following operators for <code>str class</code>. Note that <code>str</code> class (solution to Lab 6) has been written for you and you need only focus on adding the following operator functions.   
 - = (assignment operator): performs the assignment. An example of usage is  <code>s1 = s2; // s1 and s2 are str </code>
 - \+ (concatenation operator): returns the concatenation of two operators.  An example of usage is <code>s1 + s2; </code>
   - Hint: the operator should create a string which has enouth space to hold the concatination of two straing (it does not change any of its operands) 
-- << and >> (insertion and extraction operators): do the input and output. An example of usage is  <code>cout << s1; 
-# str.h
+-  &lt;&lt; and &gt;&gt; (insertion and extraction operators): do the input and output. An example of usage is  <code>cout << s1;
+  
+### str.h
 ```C++
 // str.h
 
@@ -59,9 +60,7 @@ class str
 #endif
 
 ```
-
-# str.cpp
-
+### str.cpp
 ```C++
 #include "str.h"
 #include <cstring>
