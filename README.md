@@ -1,8 +1,8 @@
-## Reverse File program
+## Operator Overloading for str class
 
 Learning outcomes highlights: 
-- dynamic memory allocation
-- file operations
+- Opverloading operator for a class with resource (str)
+-- file operations
 - array of pointers
 
 **Problem:** Write a program to get two file names as command-line arguments. The input file has one string in each line (without space). The program writes the input file strings in the output file in a reverse order. The program can be used as follows: 
