@@ -1,7 +1,7 @@
 ## Operator Overloading for str class
 
 Learning outcomes highlights: 
-- Opverloading operator for a *class with resource* (<cosde>str</code>)
+- Opverloading operator for a *class with resource* (<code>str</code>)
   - = (assignment)
   - \+ (concatination)
   - &gt;&gt; and '<<' overload
