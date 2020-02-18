@@ -3,7 +3,7 @@
 Learning outcomes highlights: 
 - Opverloading operator for a class with resource (str)
   - = (assignment)
-  - overload (concatination)
+  - + overload (concatination)
   - &gt;&gt; and << overload
 
 **Problem:** Impliment the following operators 
